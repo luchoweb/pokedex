@@ -1,8 +1,8 @@
-function App() {
+import HomeView from "./views/home";
+
+const App = () => {
   return (
-    <div className="App">
-      Pokedex
-    </div>
+    <HomeView />
   );
 }
 
