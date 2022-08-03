@@ -29,7 +29,7 @@ const List = () => {
             </Link>
           </li>
           <li className="page-item">
-            <Link className="page-link" to={`/page/${page > 1 ? parseInt(page) + 1 : 1}`}>
+            <Link className="page-link" to={`/page/${page > 1 ? parseInt(page) + 1 : 2}`}>
               Next
             </Link>
           </li>
