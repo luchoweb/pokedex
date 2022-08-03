@@ -3,10 +3,20 @@
   --blue-color: #323099;
   --yellow-color: #face48;
   --red-dark: #9a0007;
+  --green-color: #43a047;
+  --green-dark: #00701a;
   --blue-dark: #071766;
+  --blue-light: #64b5f6;
   --yellow-dark: #cf9966;
   --light-color: #ffffff;
   --dark-color: #111111;
+  --purple-color: #6a1b9a;
+  --purple-light: #9575cd;
+  --purple-light: #ab47bc;
+  --brown-color: #795548;
+  --orange-color: #ff9800;
+  --amber-color: #ffc107;
+  --grey-color: #757575;
 }
 
 body {
@@ -24,4 +34,74 @@ h1, h2, h3, h4, h5, strong, b {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.badge {
+  text-transform: capitalize;
+
+  p {
+    font-size: .8rem;
+  }
+
+  &.bg-normal {
+    background-color: var(--blue-dark);
+  }
+
+  &.bg-poison {
+    background-color: var(--purple-color);
+  }
+
+  &.bg-water {
+    background-color: var(--blue-color);
+  }
+
+  &.bg-fire {
+    background-color: var(--red-color);
+  }
+
+  &.bg-bug {
+    background-color: var(--green-color);
+  }
+
+  &.bg-grass {
+    background-color: var(--green-dark);
+  }
+
+  &.bg-flying {
+    background-color: var(--yellow-dark);
+  }
+
+  &.bg-electric {
+    background-color: var(--yellow-color);
+    color: var(--dark-color);
+  }
+
+  &.bg-fairy {
+    background-color: var(--purple-light);
+  }
+
+  &.bg-ground {
+    background-color: var(--brown-color);
+  }
+
+  &.bg-fighting {
+    background-color: var(--orange-color);
+  }
+
+  &.bg-psychic {
+    background-color: var(--amber-color);
+    color: var(--dark-color);
+  }
+
+  &.bg-rock {
+    background-color: var(--grey-color);
+  }
+
+  &.bg-ghost{
+    background-color: var(--purple-light);
+  }
+
+  &.bg-ice {
+    background-color: var(--blue-light);
+  }
 }

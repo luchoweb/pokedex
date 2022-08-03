@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import useFetchPokemons from "../../hooks/fetchPokemons";
 import Card from "../card";
 
+import "./styles.scss";
+
 const List = () => {
   const limit = 12;
   const { page } = useParams();
@@ -13,8 +15,8 @@ const List = () => {
     <>
       <ul className="list-unstyled row pokemons">
         { pokemons?.loading ? <p>Loading...</p> : pokemons?.results.map((pokemon, index) => (
-          <li className="col-6 col-md-4 col-lg-3 mb-4" key={`i${index}`}>
-            <Link to={`/pokemon/${pokemon.name}`}>
+          <li className="col-6 col-md-4 col-lg-3 mb-4 pokemon" key={`i-${index}`}>
+            <Link to={`/pokemon/${pokemon.name}`} className="link">
               <Card name={pokemon.name} />
             </Link>
           </li>
