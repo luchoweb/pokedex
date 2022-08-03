@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./styles.scss";
 import Logo from "../../../assets/images/pokedex_logo.webp";
 
@@ -12,13 +14,13 @@ const Header = () => {
           <div className="col-12 col-md-6">
             <ul className="menu list-unstyled m-0 p-0 d-flex align-items-center justify-content-end gap-4">
               <li className="menu-item">
-                <a href="/" className="menu-link">Home</a>
+                <Link to="/" className="menu-link">Home</Link>
               </li>
               <li className="menu-item">
-                <a href="/" className="menu-link">About</a>
+                <Link to="/about" className="menu-link">About</Link>
               </li>
               <li className="menu-item">
-                <a href="/" className="menu-link">Legal</a>
+                <Link to="/legal" className="menu-link">Legal</Link>
               </li>
             </ul>
           </div>
