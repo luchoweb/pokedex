@@ -19,17 +19,19 @@ const PokemonView = () => {
     ) : (
       <div className="container pt-5 pb-5 pokemon">
         <div className="row align-items-center">
-          <div className="col-12 col-md-6 text-center">
+          <div className="col-12 col-md-6 text-center col-img">
             <img src={ pokemonImage } alt={ pokemon.name } height={300} />
-          </div>
-          <div className="col-12 col-md-6">
+
+            <div className="badge-box">
             { pokemon.types.map((type, index) => (
               <div className={`badge bg-${type.type.name } me-1 p-2`} key={`i-${index}`}>
                 <p className="m-0">{ type.type.name }</p>
               </div>
             )) }
-
-            <h1 className="mt-2 mb-4 pokemon-name">{ pokemon.name }</h1>
+            </div>
+          </div>
+          <div className="col-12 col-md-6">
+            <h1 className="mt-0 mb-4 pokemon-name">{ pokemon.name }</h1>
 
             <ul className="list-unstyled m-0 p-0 details">
               <li className="detail" key="1">
@@ -45,10 +47,12 @@ const PokemonView = () => {
             </ul>
 
             <div className="stats mt-4">
-              <h4>Stats</h4>
+              <h4 className="mb-3">Stats</h4>
               { pokemon?.stats.map((stat, index) => (
-                <div className="bar-group" key={`i-${index}`}>
-                  <p className="m-0">{ `${stat.stat.name}: ${stat.base_stat}` }</p>
+                <div className="bar-group mb-3" key={`i-${index}`}>
+                  <p className="m-0 bar-label">
+                    <strong>{stat.stat.name.replace('-', ' ')}</strong>: {stat.base_stat}
+                  </p>
                   <Bar percent={stat.base_stat} color={stat.stat.name} />
                 </div>
               ))}

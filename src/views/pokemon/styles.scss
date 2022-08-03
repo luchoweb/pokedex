@@ -2,4 +2,26 @@
   &-name {
     text-transform: capitalize;
   }
+
+  .col-img {
+    position: relative;
+
+    .badge-box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      .badge {
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  .bar-group {
+    .bar-label {
+      text-transform: capitalize;
+    }
+  }
 }
