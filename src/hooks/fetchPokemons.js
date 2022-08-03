@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
-import { getPokemons } from "../helpers/getPokemons";
+import { fetchData } from "../helpers/fetchData";
 
-const useFetchPokemons = () => {
+const useFetchPokemons = (url) => {
   const [pokemons, setPokemons] = useState(undefined);
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
     if ( !pokemons ) {
-      const fetchData = async () => {
-        const data = await getPokemons('https://pokeapi.co/api/v2/pokemon?limit=12&offset=0');
+      const fetchPokemons = async () => {
+        const data = await fetchData(url);
         setPokemons(data);
         setloading(false);
       } 
 
-      fetchData();
+      fetchPokemons();
     }
   }, [pokemons]);
 
