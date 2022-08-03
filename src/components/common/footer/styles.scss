@@ -1,0 +1,15 @@
+footer {
+  background-color: var(--blue-dark);
+  border-top: .5rem solid var(--yellow-dark);
+  color: var(--light-color);
+
+  .link {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 200ms ease-in-out;
+
+    &:hover {
+      color: var(--yellow-color);
+    }
+  }
+}
