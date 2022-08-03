@@ -2,8 +2,24 @@ import { Link } from "react-router-dom";
 
 import "./styles.scss";
 import Logo from "../../../assets/images/pokedex_logo.webp";
+import Menu from "./menu";
 
 const Header = () => {
+  const menuItems = [
+    {
+      link: '/',
+      label: 'Home'
+    },
+    {
+      link: '/about',
+      label: 'About'
+    },
+    {
+      link: '/legal',
+      label: 'Legal'
+    }
+  ];
+
   return (
     <header className="pt-2 pb-2">
       <div className="container">
@@ -14,17 +30,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="col-12 col-md-6">
-            <ul className="menu list-unstyled m-0 p-0 d-flex align-items-center justify-content-end gap-4">
-              <li className="menu-item">
-                <Link to="/" className="menu-link">Home</Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/about" className="menu-link">About</Link>
-              </li>
-              <li className="menu-item">
-                <Link to="/legal" className="menu-link">Legal</Link>
-              </li>
-            </ul>
+            <Menu items={menuItems} />
           </div>
         </div>
       </div>
