@@ -1,6 +1,6 @@
-import "./style.scss";
+import "./styles.scss";
 
-const Card = () => {
+const Card = ({ data }) => {
   return(
     <div className="card">
       Pokemon here!
