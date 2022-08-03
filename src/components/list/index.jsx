@@ -13,7 +13,7 @@ const List = () => {
     <>
       <ul className="list-unstyled row pokemons">
         { pokemons?.loading ? <p>Loading...</p> : pokemons?.results.map((pokemon, index) => (
-          <li className="col-12 col-md-4 col-lg-3 mb-4" key={`i${index}`}>
+          <li className="col-6 col-md-4 col-lg-3 mb-4" key={`i${index}`}>
             <Link to={`/pokemon/${pokemon.name}`}>
               <Card name={pokemon.name} />
             </Link>
