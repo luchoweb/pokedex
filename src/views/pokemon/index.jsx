@@ -19,7 +19,7 @@ const PokemonView = () => {
     ) : (
       <div className="container pt-5 pb-5 pokemon">
         <div className="row align-items-center">
-          <div className="col-12 col-md-6 text-center col-img">
+          <div className="col-12 col-md-6 text-center col-img mb-4 mb-md-0">
             <img src={ pokemonImage } alt={ pokemon.name } height={300} />
 
             <div className="badge-box">
