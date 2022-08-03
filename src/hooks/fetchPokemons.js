@@ -6,16 +6,16 @@ const useFetchPokemons = (url) => {
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
-    if ( !pokemons ) {
-      const fetchPokemons = async () => {
-        const data = await fetchData(url);
-        setPokemons(data);
-        setloading(false);
-      } 
+    setloading(true);
 
-      fetchPokemons();
-    }
-  }, [pokemons]);
+    const fetchPokemons = async () => {
+      const data = await fetchData(url);
+      setPokemons(data);
+      setloading(false);
+    } 
+
+    fetchPokemons();
+  }, [url]);
 
   return loading ? {loading} : pokemons;
 }

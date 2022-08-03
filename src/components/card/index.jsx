@@ -8,7 +8,7 @@ const Card = ({ name }) => {
   
   return !pokemon?.loading && (
     <div className="card">
-      <img src={pokemonImage} className="card-img-top" alt={ pokemon.name } />
+      <img src={pokemonImage} className="card-img-top" alt={ pokemon.name } loading="lazy" />
       <div className="card-body">
         <h5 className="card-title">{ pokemon.name }</h5>
       </div>

@@ -8,6 +8,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomeView />} />
+      <Route path="page/:page" element={<HomeView />} />
       <Route path="about" element={<h1>Soon</h1>} />
       <Route path="legal" element={<h1>Soon</h1>} />
       <Route path="pokemon/:name" element={<PokemonView />} />

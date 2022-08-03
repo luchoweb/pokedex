@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
-import { fetchData } from "../../helpers/fetchData";
+import { Link, useParams } from "react-router-dom";
 import useFetchPokemons from "../../hooks/fetchPokemons";
 import Card from "../card";
-import Pager from "./pager";
 
 const List = () => {
-  const url = 'https://pokeapi.co/api/v2/pokemon?limit=12&offset=0';
+  const limit = 12;
+  const { page } = useParams();
+  const offset = page > 2 ? (limit * page) - limit : (parseInt(page) === 2 ? 12 : 0);
+  const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
   const pokemons = useFetchPokemons(url);
 
   return (
@@ -19,10 +20,21 @@ const List = () => {
           </li>
         )) }
       </ul>
-      { !pokemons?.loading && <Pager info={{
-        next: pokemons.next,
-        prev: pokemons.previous
-      }} />}
+      
+      <nav aria-label="Page navigation example">
+        <ul className="pagination">
+          <li className="page-item">
+            <Link className="page-link" to={`/page/${page > 1 ? parseInt(page) - 1 : 1}`}>
+              Previous
+            </Link>
+          </li>
+          <li className="page-item">
+            <Link className="page-link" to={`/page/${page >= 1 ? parseInt(page) + 1 : 0}`}>
+              Next
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </>
   )
 }

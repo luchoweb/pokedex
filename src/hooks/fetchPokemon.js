@@ -15,7 +15,7 @@ const useFetchPokemon = (name) => {
 
       fetchPokemon();
     }
-  }, [pokemon]);
+  }, [pokemon, name]);
 
   return loading ? {loading} : pokemon;
 }
