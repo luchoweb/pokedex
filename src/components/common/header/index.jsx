@@ -9,7 +9,9 @@ const Header = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12 col-md-6">
-            <img src={Logo} alt="Pokedex" height={70} width={194} />
+            <Link to="/">
+              <img src={Logo} alt="Pokedex" height={70} width={194} />
+            </Link>
           </div>
           <div className="col-12 col-md-6">
             <ul className="menu list-unstyled m-0 p-0 d-flex align-items-center justify-content-end gap-4">
