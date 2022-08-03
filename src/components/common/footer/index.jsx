@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-12 col-lg-6 mb-3 mb-lg-0">
             <img src={Logo} alt="pokedex" height={50} />
-            <p className="mt-3 mb-0">This is another Pokedex web app. The idea was to practice and learn more about React. If you like it, please leave me a star on <a href="https://github.com/luchoweb/pokedex" className="link" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+            <p className="mt-3 mb-0">This is another Pokedex web app. The idea was to practice and learn more about React. If you like it, please give me a star on <a href="https://github.com/luchoweb/pokedex" className="link" target="_blank" rel="noopener noreferrer"><strong>GitHub</strong></a>.</p>
           </div>
           <div className="col-12 col-md-6 col-lg-3 mb-3 mb-md-0">
             2
