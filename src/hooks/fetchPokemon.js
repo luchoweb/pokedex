@@ -23,7 +23,7 @@ const useFetchPokemon = (name) => {
 
       fetchPokemon();
     }
-  }, [pokemon, name]);
+  }, [pokemon, name, navigate]);
 
   return loading ? {loading} : pokemon;
 }

@@ -10,7 +10,7 @@ const SearchForm = ({ query }) => {
   useEffect(() => {
     if ( query && query !== 'none' )
       navigate(`/pokemon/${query.trim().toLowerCase()}`);
-  }, [query]);
+  });
 
   return (
     <>
