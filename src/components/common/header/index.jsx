@@ -5,21 +5,6 @@ import Logo from "../../../assets/images/pokedex_logo.webp";
 import Menu from "./menu";
 
 const Header = () => {
-  const menuItems = [
-    {
-      link: '/',
-      label: 'Home'
-    },
-    {
-      link: '/about',
-      label: 'About'
-    },
-    {
-      link: '/legal',
-      label: 'Legal'
-    }
-  ];
-
   return (
     <header className="pt-2 pb-2">
       <div className="container">
@@ -30,7 +15,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="col-12 col-md-6">
-            <Menu items={menuItems} />
+            <Menu />
           </div>
         </div>
       </div>
