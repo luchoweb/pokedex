@@ -3,7 +3,7 @@ import Card from "../card";
 
 import "./styles.scss";
 
-const List = ({ data, page }) => {
+const List = ({ data, limit, page }) => {
   return (
     <>
       <ul className="list-unstyled row pokemons">
@@ -17,13 +17,16 @@ const List = ({ data, page }) => {
       </ul>
       
       <nav aria-label="Page navigation example">
+        <p className="m-0 mb-3">
+          Page { page || 1 } of { Math.ceil(data?.count / limit) }
+        </p>
         <ul className="pagination">
-          <li className="page-item">
+          <li className={`page-item ${data?.previous ? 'd-inline' : 'd-none'}`}>
             <Link className="page-link" to={`/page/${page > 1 ? parseInt(page) - 1 : 1}`}>
               Previous
             </Link>
           </li>
-          <li className="page-item">
+          <li className={`page-item ${data?.next ? 'd-inline' : 'd-none'}`}>
             <Link className="page-link" to={`/page/${page > 1 ? parseInt(page) + 1 : 2}`}>
               Next
             </Link>

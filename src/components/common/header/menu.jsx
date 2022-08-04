@@ -7,16 +7,16 @@ const Menu = () => {
       label: 'Home'
     },
     {
+      link: '/search',
+      label: 'Search'
+    },
+    {
       link: '/about',
       label: 'About'
     },
     {
       link: '/legal',
       label: 'Legal'
-    },
-    {
-      link: '/search',
-      label: 'Search'
     }
   ];
 

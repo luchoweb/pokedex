@@ -1,6 +1,7 @@
 import useFetchPokemon from "../../hooks/fetchPokemon";
 
 import "./styles.scss";
+import NoImage from "../../assets/images/no-image.png";
 
 const Card = ({ name }) => {
   const pokemon = useFetchPokemon(name);
@@ -8,7 +9,7 @@ const Card = ({ name }) => {
   
   return !pokemon?.loading && (
     <div className={`card gradient-${pokemon.types[0].type.name}`}>
-      <img src={pokemonImage} className="card-img-top" alt={ pokemon.name } loading="lazy" />
+      <img src={pokemonImage || NoImage} className="card-img-top" alt={ pokemon.name } loading="lazy" />
       <div className="card-body">
         <h5 className="card-title mb-3">{ pokemon.name }</h5>
         { pokemon.types.map((type, index) => (

@@ -4,6 +4,7 @@ import Layout from "../layout";
 import RadarChart from "../../components/radar-chart";
 
 import "./styles.scss";
+import NoImage from "../../assets/images/no-image.png";
 
 const PokemonView = () => {
   const { name } = useParams();
@@ -25,7 +26,7 @@ const PokemonView = () => {
           </h1>
 
           <div className="col-12 col-md-6 text-center col-img mb-4 mb-md-0">
-            <img src={ pokemonImage } alt={ pokemon?.name } height={300} />
+            <img src={ pokemonImage || NoImage } alt={ pokemon?.name } height={300} />
 
             <div className="badge-box">
             { pokemon?.types.map((type, index) => (

@@ -34,7 +34,7 @@ const RadarChart = ({ data }) => {
   };
 
   data.forEach(item => {
-    charts.labels.push(item.stat.name);
+    charts.labels.push(item.stat.name.replace('-', ' '));
     charts.datasets[0].data.push(item.base_stat);
   });
 

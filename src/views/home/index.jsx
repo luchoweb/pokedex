@@ -4,16 +4,16 @@ import List from "../../components/list";
 import Layout from "../layout";
 
 const HomeView = () => {
-  const limit = 12;
+  const limit = 16;
   const { page } = useParams();
-  const offset = page > 2 ? (limit * page) - limit : (parseInt(page) === 2 ? 12 : 0);
+  const offset = page > 2 ? (limit * page) - limit : (parseInt(page) === 2 ? limit : 0);
   const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
   const pokemons = useFetchPokemons(url);
 
   return (
     <Layout>
       <div className="container pt-4 pb-4">
-        <List data={pokemons} page={page} />
+        <List data={pokemons} limit={limit} page={page} />
       </div>
     </Layout>
   )
