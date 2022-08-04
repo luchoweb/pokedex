@@ -3,14 +3,16 @@ import { Routes, Route } from "react-router-dom";
 import HomeView from "./views/home";
 import PokemonView from "./views/pokemon";
 import NotFoundView from "./views/404";
+import AboutPage from "./pages/about";
+import LegalPage from "./pages/legal";
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomeView />} />
       <Route path="page/:page" element={<HomeView />} />
-      <Route path="about" element={<h1>Soon</h1>} />
-      <Route path="legal" element={<h1>Soon</h1>} />
+      <Route path="about" element={<AboutPage />} />
+      <Route path="legal" element={<LegalPage />} />
       <Route path="pokemon/:name" element={<PokemonView />} />
       <Route path="*" element={<NotFoundView />} />
     </Routes>

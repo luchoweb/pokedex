@@ -1,5 +1,5 @@
 import List from "../../components/list";
-import Layout from "../layout/layout";
+import Layout from "../layout";
 
 const HomeView = () => {
   return (
