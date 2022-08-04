@@ -5,7 +5,6 @@ import RadarChart from "../../components/radar-chart";
 
 import "./styles.scss";
 import NoImage from "../../assets/images/no-image.png";
-import Slots from "../../components/slots";
 
 const PokemonView = () => {
   const { name } = useParams();
@@ -50,8 +49,15 @@ const PokemonView = () => {
               <ul className="list-unstyled m-0 p-0 abilities">
                 { pokemon?.abilities.map((ability, index) => (
                   <li key={`a-${index}`} className="ability d-flex align-items-center">
-                    <span className="me-2">{ ability.ability.name.replace('-', ' ') }</span>
-                    <Slots number={ability.slot} color={pokemon?.types[0]?.type?.name} />
+                    <span className="me-2">
+                      { ability.ability.name.replace('-', ' ') }
+                      { index === 0 && (
+                        <strong className="ms-1">(main)</strong>
+                      )}
+                      { ability.is_hidden && (
+                        <strong className="ms-1">(hidden)</strong>
+                      )}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -66,12 +72,12 @@ const PokemonView = () => {
                 </li>
                 <li className="detail" key="2">
                   <p className="m-0">
-                    <strong>Weight</strong>: { pokemon?.weight } pounds
+                    <strong>Weight</strong>: { pokemon?.weight / 10 } kg
                   </p>
                 </li>
                 <li className="detail" key="3">
                   <p className="m-0">
-                    <strong>Height</strong>: { pokemon?.height } inches
+                    <strong>Height</strong>: { pokemon?.height / 10 } m
                   </p>
                 </li>
               </ul>
