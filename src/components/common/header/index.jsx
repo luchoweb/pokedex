@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12 mb-4 mb-md-0 col-md-6">
-            <Link to="/" className="d-block text-center text-md-start">
+            <Link to="/" className="d-block d-md-inline text-center text-md-start">
               <img src={Logo} alt="Pokedex" height={70} width={194} />
             </Link>
           </div>
