@@ -14,7 +14,6 @@ const Menu = () => {
       link: '/legal',
       label: 'Legal'
     },
-    ,
     {
       link: '/search',
       label: 'Search'

@@ -14,7 +14,7 @@ const PokemonView = () => {
     <Layout>
     { pokemon?.loading ? (
       <div className="container pt-5 pb-5">
-        <h4 className="m-0 text-center display-6">Loading...</h4>
+        <h3 className="m-0 text-center">Loading data, please wait...</h3>
       </div>
     ) : (
       <div className="container pt-5 pb-5 pokemon">

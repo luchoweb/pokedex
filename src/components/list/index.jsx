@@ -1,20 +1,13 @@
-import { Link, useParams } from "react-router-dom";
-import useFetchPokemons from "../../hooks/fetchPokemons";
+import { Link } from "react-router-dom";
 import Card from "../card";
 
 import "./styles.scss";
 
-const List = () => {
-  const limit = 12;
-  const { page } = useParams();
-  const offset = page > 2 ? (limit * page) - limit : (parseInt(page) === 2 ? 12 : 0);
-  const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
-  const pokemons = useFetchPokemons(url);
-
+const List = ({ data, page }) => {
   return (
     <>
       <ul className="list-unstyled row pokemons">
-        { pokemons?.loading ? <p>Loading...</p> : pokemons?.results.map((pokemon, index) => (
+        { data?.loading ? <p>Loading...</p> : data?.results.map((pokemon, index) => (
           <li className="col-6 col-md-4 col-lg-3 mb-4 pokemon" key={`i-${index}`}>
             <Link to={`/pokemon/${pokemon.name}`} className="link">
               <Card name={pokemon.name} />
