@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import useFetchPokemon from "../../hooks/fetchPokemon";
 import Layout from "../layout";
-import Bar from "../../components/bar";
 import RadarChart from "../../components/radar-chart";
 
 import "./styles.scss";
