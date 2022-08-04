@@ -1,8 +1,13 @@
 .card {
-  box-shadow: 2px 2px 4px #aaaaaa;
+  box-shadow: 2px 2px 4px #cccccc;
+  transition: all 200ms ease-in-out;
 
   &-title {
     color: var(--dark-color);
     text-transform: capitalize;
+  }
+
+  &:hover {
+    transform: scale(1.03);
   }
 }

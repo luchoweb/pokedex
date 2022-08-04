@@ -11,7 +11,6 @@ const useFetchPokemon = (name) => {
     if ( !pokemon ) {
       const fetchPokemon = async () => {
         const data = await fetchData(`https://pokeapi.co/api/v2/pokemon/${name}`);
-        console.log('data', data)
         
         if ( data ) {
           setPokemon(data);

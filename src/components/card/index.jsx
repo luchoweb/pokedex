@@ -7,7 +7,7 @@ const Card = ({ name }) => {
   const pokemonImage = pokemon?.sprites?.other?.home?.front_default;
   
   return !pokemon?.loading && (
-    <div className="card">
+    <div className={`card gradient-${pokemon.types[0].type.name}`}>
       <img src={pokemonImage} className="card-img-top" alt={ pokemon.name } loading="lazy" />
       <div className="card-body">
         <h5 className="card-title mb-3">{ pokemon.name }</h5>

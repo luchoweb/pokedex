@@ -11,7 +11,7 @@ const PokemonView = () => {
   const pokemonImage = pokemon?.sprites?.other?.home?.front_default;
 
   return (
-    <Layout>
+    <Layout classname={`gradient-${pokemon?.types && pokemon?.types[0]?.type?.name}`}>
     { pokemon?.loading ? (
       <div className="container pt-5 pb-5">
         <h3 className="m-0 text-center">Loading data, please wait...</h3>

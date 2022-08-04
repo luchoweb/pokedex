@@ -17,9 +17,11 @@
   --orange-color: #ff9800;
   --amber-color: #ffc107;
   --grey-color: #757575;
+  --silver-color: #78909c;
 }
 
 body {
+  background-color: #f9f9f9;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -84,7 +86,8 @@ code {
     background-color: var(--brown-color);
   }
 
-  &.bg-fighting {
+  &.bg-fighting,
+  &.bg-dragon {
     background-color: var(--orange-color);
   }
 
@@ -103,5 +106,98 @@ code {
 
   &.bg-ice {
     background-color: var(--blue-light);
+  }
+
+  &.bg-steel {
+    background-color: var(--silver-color);
+  }
+}
+
+.gradient {
+  &-bug {
+    background: rgb(0,112,26);
+    background: linear-gradient(150deg, rgba(0,112,26,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-normal {
+    background: rgb(7,23,102);
+    background: linear-gradient(150deg, rgba(7,23,102,0.25) 0%, rgba(255,255,255,0.3) 53%);
+  }
+  
+  &-poison {
+    background: rgb(106,27,154);
+    background: linear-gradient(150deg, rgba(106,27,154,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-water {
+    background: rgb(50,48,153);
+    background: linear-gradient(150deg, rgba(50,48,153,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-fire {
+    background: rgb(154,0,7);
+    background: linear-gradient(150deg, rgba(154,0,7,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-bug {
+    background: rgb(67,160,71);
+    background: linear-gradient(150deg, rgba(67,160,71,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-grass {
+    background: rgb(0,112,26);
+    background: linear-gradient(150deg, rgba(0,112,26,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-flying,
+  &-electric {
+    background: rgb(207,153,102);
+    background: linear-gradient(150deg, rgba(207,153,102,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-fairy {
+    background: rgb(149,117,205);
+    background: linear-gradient(150deg, rgba(149,117,205,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-ground {
+    background: rgb(121,85,72);
+    background: linear-gradient(150deg, rgba(121,85,72,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-fighting,
+  &-dragon {
+    background: rgb(255,152,0);
+    background: linear-gradient(150deg, rgba(255,152,0,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-psychic {
+    background: rgb(255,193,7);
+    background: linear-gradient(150deg, rgba(255,193,7,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-rock {
+    background: rgb(117,117,117);
+    background: linear-gradient(150deg, rgba(117,117,117,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-ghost{
+    background: rgb(149,117,205);
+    background: linear-gradient(150deg, rgba(149,117,205,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+  
+  &-ice {
+    background: rgb(100,181,246);
+    background: linear-gradient(150deg, rgba(100,181,246,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+
+  &-dark {
+    background: rgb(17,17,17);
+    background: linear-gradient(150deg, rgba(17,17,17,0.25) 0%, rgba(255,255,255,0.3) 63%);
+  }
+
+  &-steel {
+    background: rgb(120,144,156);
+    background: linear-gradient(150deg, rgba(120,144,156,0.25) 0%, rgba(255,255,255,0.3) 63%);
   }
 }
