@@ -33,7 +33,7 @@ const RadarChart = ({ data }) => {
     ],
   };
 
-  data.map(item => {
+  data.forEach(item => {
     charts.labels.push(item.stat.name);
     charts.datasets[0].data.push(item.base_stat);
   });
