@@ -44,71 +44,73 @@ code {
   p {
     font-size: .8rem;
   }
+}
 
-  &.bg-normal {
+.bg {
+  &-normal {
     background-color: var(--blue-dark);
   }
 
-  &.bg-poison {
+  &-poison {
     background-color: var(--purple-color);
   }
 
-  &.bg-water {
+  &-water {
     background-color: var(--blue-color);
   }
 
-  &.bg-fire {
+  &-fire {
     background-color: var(--red-color);
   }
 
-  &.bg-bug {
+  &-bug {
     background-color: var(--green-color);
   }
 
-  &.bg-grass {
+  &-grass {
     background-color: var(--green-dark);
   }
 
-  &.bg-flying {
+  &-flying {
     background-color: var(--yellow-dark);
   }
 
-  &.bg-electric {
+  &-electric {
     background-color: var(--yellow-color);
     color: var(--dark-color);
   }
 
-  &.bg-fairy {
+  &-fairy {
     background-color: var(--purple-light);
   }
 
-  &.bg-ground {
+  &-ground {
     background-color: var(--brown-color);
   }
 
-  &.bg-fighting,
-  &.bg-dragon {
+  &-fighting,
+  &-dragon {
     background-color: var(--orange-color);
   }
 
-  &.bg-psychic {
+  &-psychic {
     background-color: var(--amber-color);
     color: var(--dark-color);
   }
 
-  &.bg-rock {
+  &-rock {
     background-color: var(--grey-color);
   }
 
-  &.bg-ghost{
+  &-ghost{
     background-color: var(--purple-light);
   }
 
-  &.bg-ice {
+  &-ice {
     background-color: var(--blue-light);
   }
 
-  &.bg-steel {
+  &-steel {
     background-color: var(--silver-color);
   }
 }
