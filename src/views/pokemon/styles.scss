@@ -1,6 +1,13 @@
 .pokemon {
   &-name {
-    text-transform: capitalize;
+    span {
+      text-transform: capitalize;
+    }
+
+    small {
+      font-size: 1.2rem;
+      margin-bottom: -.3rem;
+    }
   }
 
   .col-img {
